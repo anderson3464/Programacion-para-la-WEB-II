@@ -1,13 +1,27 @@
 import { Link } from 'react-router-dom';
+import UsuarioCard from '../components/UsuarioCard';
 
 function UsuariosLista() {
     return (
         <div>
             <h1>Lista de usuarios</h1>
-            <ul>
-                <li><Link to="/usuario/123">Ver perfil del usuario Juan Perez (123)</Link></li>
-                <li><Link to="/usuario/217">Ver perfil del usuario Ana Gomez (217)</Link></li>
-            </ul>
+            <p>Pasando PROPS uno por uno</p>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                <UsuarioCard 
+                    nombre="Juan Perez"
+                    rol="Administrador"
+                    estado="Activo"
+                    imagen="https://randomuser.me/api/portraits/men/32.jpg"
+                />
+                <UsuarioCard 
+                    nombre="Ana Gomez"
+                    rol="Diseñadora"
+                    estado="Inactivo"
+                    imagen="https://randomuser.me/api/portraits/women/44.jpg"
+                />
+            </div>
+
         </div>
     );
 }
