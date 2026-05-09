@@ -1,5 +1,6 @@
 import ContadorVentas from "../components/ContadorVentas";
 import ServicioCard from "../components/ServicioCard";
+import RelojDigital from "../components/RelojDigital";
 
 function PanelGeneral(){
     return(
@@ -8,8 +9,9 @@ function PanelGeneral(){
             <p>Bienvenido al sistema. Aqui estan las estadisticas de hoy.</p>
             <ServicioCard />
             <ContadorVentas/>
-            
+            <RelojDigital/>
         </div>
+        
     );
 }
 
